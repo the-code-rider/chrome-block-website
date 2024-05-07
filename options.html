@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Block Sites Options</title>
+  <style>
+    #blockedSitesList {
+      margin-top: 20px;
+    }
+    .site-item {
+      margin: 5px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .remove-site {
+      cursor: pointer;
+      color: red;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Blocker Options</h1>
+  <div>
+    <input type="text" id="siteInput" placeholder="Enter site to block...">
+    <button id="addSite">Add</button>
+  </div>
+  <div>
+    <textarea id="messageInput" placeholder="Enter custom message..."></textarea>
+    <button id="saveMessage">Save Message</button>
+  </div>
+  <div id="blockedSitesList">
+    <h2>Blocked Sites:</h2>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

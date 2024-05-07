@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Website Blocker",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  "options_page": "options.html",
+   "web_accessible_resources": [
+    {
+      "resources": ["blocked.html"],
+      "matches": ["chrome-extension://*/*"]
+    }
+  ],
+
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+  "content_security_policy": {
+  "extension_pages": "script-src 'self'; object-src 'self'"
+}
+}
